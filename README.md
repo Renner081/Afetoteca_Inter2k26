@@ -1,0 +1,1 @@
+# Afetoteca_Inter2k26
