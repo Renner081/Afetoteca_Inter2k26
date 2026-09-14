@@ -1,0 +1,181 @@
+.ajudar-inicio {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 90px 40px 50px;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+
+.ajudar-inicio span {
+    color: #E85D24;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ajudar-inicio h1 {
+    margin-top: 12px;
+    font-size: 42px;
+    line-height: 1.15;
+    color: #4A2618;
+}
+
+.ajudar-inicio p {
+    margin: 20px auto 0;
+    max-width: 560px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4A2618;
+}
+
+.voluntario-section {
+    padding: 20px 40px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 620px;
+    background: #FFFFFF;
+    border: 1.8px solid #E85D24;
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 20px 40px rgba(74, 38, 24, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo-dupla > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-family: "Bree Serif", serif;
+    font-size: 16px;
+    color: #4A2618;
+}
+
+.opcional {
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 14px;
+    color: #a3836f;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    font-family: inherit;
+    font-size: 16px;
+    color: #4A2618;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #e6d3bd;
+    background: #F7EBDD;
+    outline: none;
+    transition: 0.25s;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #b79a80;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #E85D24;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(232, 93, 36, 0.15);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.chip {
+    position: relative;
+}
+
+.chip input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.chip span {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 30px;
+    border: 1.5px solid #E85D24;
+    color: #E85D24;
+    font-family: "Bree Serif", serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+    user-select: none;
+}
+
+.chip input:checked + span {
+    background-color: #E85D24;
+    color: #FFFFFF;
+}
+
+.chip:hover span {
+    box-shadow: 0 0 0 3px rgba(232, 93, 36, 0.15);
+}
+
+.btn-enviar {
+    justify-self: start;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.form-aviso {
+    font-size: 15px;
+    color: #4A2618;
+    min-height: 20px;
+}
+
+.form-aviso.erro {
+    color: #c0392b;
+}
+
+@media (max-width: 640px) {
+    .ajudar-inicio {
+        padding: 70px 24px 40px;
+    }
+
+    .ajudar-inicio h1 {
+        font-size: 32px;
+    }
+
+    .form-card {
+        padding: 32px 24px;
+    }
+
+    .campo-dupla {
+        grid-template-columns: 1fr;
+    }
+}
