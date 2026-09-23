@@ -87,6 +87,12 @@
     color: #4A2618;
 }
  
+.sobre-historia-midia-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* esse é o "espaço entre as imgs" que você quer — ajuste o valor */
+}
+
 .sobre-historia-midia {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -94,13 +100,12 @@
     overflow: hidden;
     border: 1.8px solid #E85D24;
 }
- 
+
 .sobre-historia-midia img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
- 
 .sobre-valores {
     background-color: #F7EBDD;
     padding: 90px 40px;
