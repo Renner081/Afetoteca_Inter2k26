@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
     <title>Quem Somos - Afetoteca</title>
     <link rel="icon" href="../img/logo2.png" type="image/png">
     <link rel="stylesheet" href="../css/home.css">
@@ -20,18 +21,24 @@
 <div id="topo"></div>
 <header>
  
-<a href="home.html" class="logo-site">
-     <img src="../img/logo2.png" alt="Logo Afetoteca">
-    <h2>AFETOTECA</h2>
+<a href="home.html" class="logo-site" aria-label="AFETOTECA - Página Inicial">
+     <img src="../img/logo2.png" alt="Logo da Afetoteca: Duas mãos se unem formando o tronco de uma árvore, onde centenas de livros coloridos e abertos compõem a copa e os galhos, em estilo de ilustração tribal">
+     <span class="logotexto">AFETOTECA</span>
 </a>
  
     <div class="navegacao">
-        <a href="home.html">Home</a>
-        <a href="sobre.html">Quem Somos</a>
-        <a href="projetos.html">Nossos Projetos</a>
+        <a href="home.html" aria-label=" Botão de Navegação para a página inicial">Home</a>
+        <a href="sobre.html" aria-label="Botão de navegação para a Página Quem Somos">Quem Somos</a>
+        <a href="projetos.html"  aria-label="Botão de navegação para a página Nossos Projetos">Nossos Projetos</a>
     </div>
- 
-    <a href="ajudar.html" class="btn-ajudar">Quero Ajudar</a>
+
+     <div class="btn-container">
+            <button id="botao-escuro" class="btn-temae" aria-pressed="false" aria-label="Ativar modo escuro">
+        <i class="ti ti-moon" aria-hidden="true"></i>
+    </button>
+         <a href="ajudar.html" class="btn-ajudar" aria-label="Botão clicável quero ajudar">Quero Ajudar</a>
+    </div>
+    
 </header>
  
 <section class="sobre-hero">
@@ -168,6 +175,8 @@
         <svg viewBox="0 0 24 24"><path d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
     </a>
 </footer>
+<script src="tema.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
  

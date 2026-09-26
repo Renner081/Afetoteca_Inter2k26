@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
     <title>Seja Voluntário(a) - Afetoteca</title>
     <link rel="icon" href="../img/logo2.png" type="image/png">
     <link rel="stylesheet" href="../css/home.css">
@@ -20,9 +21,9 @@
 <div id="topo"></div>
 <header>
 
-<a href="home.html" class="logo-site">
+<a href="home.html" class="logo-site" aria-label="AFETOTECA - Página Inicial">
     <img src="../img/logo2.png" alt="Logo Afetoteca">
-    <h2>AFETOTECA</h2>
+    <span class="logotexto">AFETOTECA</span>
 </a>
 
     <div class="navegacao">
@@ -31,7 +32,13 @@
         <a href="projetos.html">Nossos Projetos</a>
     </div>
 
-    <a href="ajudar.html" class="btn-ajudar">Quero Ajudar</a>
+    <div class="btn-container">
+            <button id="botao-escuro" class="btn-temae" aria-pressed="false" aria-label="Ativar modo escuro">
+        <i class="ti ti-moon" aria-hidden="true"></i>
+    </button>
+         <a href="ajudar.html" class="btn-ajudar" aria-label="Botão clicável quero ajudar">Quero Ajudar</a>
+    </div>
+
 </header>
 
 <section class="ajudar-inicio">
@@ -137,7 +144,8 @@
         <svg viewBox="0 0 24 24"><path d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
     </a>
 </footer>
-
-<script src="../js/Ajudar.js"></script>
+<script src="../js/tema.js"></script>
+<script src="../js/ajudar.js"></script>
+<script src="../js/home.js"></script>
 </body>
 </html>

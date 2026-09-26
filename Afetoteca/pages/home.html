@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
     <title>Afetoteca - Biblioteca Comunitária</title>
     <link rel="icon" href="../img/logo2.png" type="image/png">
     <link rel="stylesheet" href="../css/home.css">
@@ -18,18 +19,23 @@
 <div id="topo"></div>
 <header>
 
-<a href="pages/home.html" class="logo-site">
+<a href="pages/home.html" class="logo-site" aria-label="AFETOTECA -Pàgina Inicial">
     <img src="../img/logo2.png" alt="Logo Afetoteca">
-    <h2>AFETOTECA</h2>
+    <span class="logotexto">AFETOTECA</span>
 </a>
 
     <div class="navegacao">
-        <a href="home.html">Home</a>
-        <a href="sobre.html">Quem Somos</a>
-        <a href="projetos.html">Nossos Projetos</a>
+        <a href="home.html" aria-label=" Botão de Navegação para a página inicial">Home</a>
+        <a href="sobre.html" aria-label="Botão de navegação para a Página Quem Somos">Quem Somos</a>
+        <a href="projetos.html" aria-label="Botão de navegação para a página Nossos Projetos">Nossos Projetos</a>
     </div>
 
-    <a href="ajudar.html" class="btn-ajudar">Quero Ajudar</a>
+ <div class="btn-container">
+            <button id="botao-escuro" class="btn-temae" aria-pressed="false" aria-label="Ativar modo escuro">
+        <i class="ti ti-moon" aria-hidden="true"></i>
+    </button>
+         <a href="ajudar.html" class="btn-ajudar" aria-label="Botão clicável quero ajudar">Quero Ajudar</a>
+    </div>
 </header>
 
 <section class="inicio">
@@ -37,7 +43,7 @@
         <span>Biblioteca comunitária</span>
         <h1>Promovendo leitura, cultura e afetividade.</h1>
         <p>Um espaço de acesso à leitura e à cultura para toda a comunidade.</p>
-        <a href="sobre.html" class="btn-historia">Conheça nossa história</a>
+        <a href="sobre.html" class="btn-historia" aria-label="Botão Clicável para página Quem somos">Conheça nossa história</a>
     </div>
 
 <div class="inicio-fotos">
@@ -53,8 +59,8 @@
         <h2>Começamos em 2023, com afeto no nome e na prática.</h2>
         <p>Inspirados pela Livroteca do Pina e movidos pela ideia de que tudo o que é aprendido com afeto pode ser mais significativo e prazeroso, a Afetoteca nasceu com o propósito de aproximar a comunidade da educação, da arte e da cultura, tendo as crianças como uma das principais formas de conexão com esse propósito. Com o tempo, o projeto cresceu e passou a ser muito mais do que uma biblioteca comunitária. Hoje, a Afetoteca também é um espaço de convivência, aprendizado e acolhimento.</p>
         <div class="resumo-botoes">
-            <a href="sobre.html" class="btn-outline">Saiba Mais</a>
-            <a href="ajudar.html" class="btn-volun">Seja Voluntário</a>
+            <a href="sobre.html" class="btn-outline" aria-label="Botão Clicável Saiba mais">Saiba Mais</a>
+            <a href="ajudar.html" class="btn-volun" aria-label="Botão Clicável Seja Voluntário">Seja Voluntário</a>
         </div>
     </div>
 
@@ -112,7 +118,7 @@
         </div>
     </div>
 
-    <a href="projetos.html" class="btn-outline">Conheça nossos projetos</a>
+    <a href="projetos.html" class="btn-outline" aria-label="Botão Clicável Conheça nossos projetos">Conheça nossos projetos</a>
 </section>
 
 <section class="localizacao">
@@ -124,7 +130,8 @@
             height="100%"
             style="border:0;"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa da localização da Afetoteca na Avenida Bicentenário da Revolução Francesa, Recife">
         </iframe>
     </div>
 
@@ -142,15 +149,15 @@
     <div class="rodape-topo">
         <div class="rodape-marca">
             <a href="home.html" class="logo-site">
-                <img src="../img/logo2.png" alt="Logo Afetoteca">
+                <img src="../img/logo2.png" alt="Logo da Afetoteca: Duas mãos se unem formando o tronco de uma árvore, onde centenas de livros coloridos e abertos compõem a copa e os galhos, em estilo de ilustração tribal.">
                 <h2>AFETOTECA</h2>
             </a>
             <p>Cultura que conecta, conhecimento que transforma.</p>
             <div class="rodape-icones">
-                <a href="https://www.instagram.com/afeto.teca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/afeto.teca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Afetoteca">
                     <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.07.05 1.79.22 2.43.46.66.25 1.21.6 1.76 1.15.5.5.85 1.02 1.15 1.76.24.64.41 1.36.46 2.43.05 1.07.06 1.42.06 4.12s-.01 3.05-.06 4.12c-.05 1.07-.22 1.79-.46 2.43-.25.66-.6 1.21-1.15 1.76a4.9 4.9 0 0 1-1.76 1.15c-.64.24-1.36.41-2.43.46-1.07.05-1.42.06-4.12.06s-3.05-.01-4.12-.06c-1.07-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.24-.64-.41-1.36-.46-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.07.22-1.79.46-2.43.25-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.43 2.5c.64-.24 1.36-.41 2.43-.46C8.93 2.01 9.28 2 12 2Zm0 1.8c-2.65 0-2.97.01-4.01.06-.87.04-1.34.18-1.66.3-.42.16-.72.36-1.03.67-.31.31-.5.6-.67 1.03-.12.32-.26.79-.3 1.66C4.29 8.75 4.28 9.07 4.28 12s.01 3.25.06 4.29c.04.87.18 1.34.3 1.66.16.42.36.72.67 1.03.31.31.6.5 1.03.67.32.12.79.26 1.66.3 1.04.05 1.36.06 4.01.06s2.97-.01 4.01-.06c.87-.04 1.34-.18 1.66-.3.42-.16.72-.36 1.03-.67.31-.31.5-.6.67-1.03.12-.32.26-.79.3-1.66.05-1.04.06-1.36.06-4.29s-.01-3.25-.06-4.29c-.04-.87-.18-1.34-.3-1.66a2.7 2.7 0 0 0-.67-1.03 2.7 2.7 0 0 0-1.03-.67c-.32-.12-.79-.26-1.66-.3C14.97 3.81 14.65 3.8 12 3.8Zm0 3.35a4.85 4.85 0 1 1 0 9.7 4.85 4.85 0 0 1 0-9.7Zm0 1.8a3.05 3.05 0 1 0 0 6.1 3.05 3.05 0 0 0 0-6.1Zm5.04-2.02a1.13 1.13 0 1 1 0 2.27 1.13 1.13 0 0 1 0-2.27Z"/></svg>
                 </a>
-                <a href="https://www.tiktok.com/@afeto.teca" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@afeto.teca" target="_blank" rel="noopener noreferrer" aria-label="TikTok da Afetoteca">
                     <svg viewBox="0 0 24 24"><path d="M16.6 3c.4 2.4 1.9 4 4.4 4.2v3.1c-1.5.1-2.9-.4-4.4-1.3v6.4a6.1 6.1 0 1 1-6.1-6.1c.3 0 .6 0 1 .1v3.2a3 3 0 1 0 2.1 2.9V3h3Z"/></svg>
                 </a>
             </div>
@@ -158,9 +165,9 @@
 
         <div class="rodape-coluna">
             <h3>Navegação</h3>
-            <a href="pages/home.html">Home</a>
-            <a href="pages/sobre.html">Quem Somos</a>
-            <a href="pages/projetos.html">Nossos Projetos</a>
+            <a href="pages/home.html" aria-label=" Botão de Navegação rodapé para a página inicial">Home</a>
+            <a href="pages/sobre.html" aria-label="Botão de navegação rodapé para a Página Quem Somos">Quem Somos</a>
+            <a href="pages/projetos.html" aria-label="Botão de navegação rodapé para a página Nossos Projetos">Nossos Projetos</a>
         </div>
 
         <div class="rodape-coluna">
@@ -179,4 +186,6 @@
         <svg viewBox="0 0 24 24"><path d="M12 5l-7 7h4v7h6v-7h4z"/></svg>
     </a>
 </footer>
+<script src="tema.js"></script>
+<script src="home.js"></script>
 </body>
