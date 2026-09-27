@@ -5,20 +5,20 @@
     text-align: center;
     font-family: "Bree Serif", serif;
 }
-
+ 
 .ajudar-inicio span {
     color: #E85D24;
     font-size: 18px;
     font-weight: bold;
 }
-
+ 
 .ajudar-inicio h1 {
     margin-top: 12px;
     font-size: 42px;
     line-height: 1.15;
     color: #4A2618;
 }
-
+ 
 .ajudar-inicio p {
     margin: 20px auto 0;
     max-width: 560px;
@@ -26,14 +26,97 @@
     line-height: 1.6;
     color: #4A2618;
 }
-
+ 
 .voluntario-section {
+    position: relative;
+    overflow: hidden;
     padding: 20px 40px 100px;
     display: flex;
     justify-content: center;
 }
-
+ 
+.foto-coluna {
+    position: absolute;
+    top: 0;
+    height: 120%;
+    width: 300px;
+    overflow: hidden;
+    z-index: 1;
+}
+ 
+.foto-coluna::before,
+.foto-coluna::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    z-index: 2;
+    pointer-events: none;
+}
+ 
+.foto-coluna::before {
+    top: 0;
+    background: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+ 
+.foto-coluna::after {
+    bottom: 0;
+    background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+ 
+.foto-coluna.esquerda {
+    left: 0;
+}
+ 
+.foto-coluna.direita {
+    right: 0;
+}
+ 
+.foto-coluna-track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+ 
+.foto-coluna-track img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1.5px solid rgba(232, 93, 36, 0.35);
+    opacity: 0.6;
+    filter: saturate(0.85);
+}
+ 
+.foto-coluna.esquerda .foto-coluna-track {
+    animation: deslizar-cima 55s linear infinite;
+}
+ 
+.foto-coluna.direita .foto-coluna-track {
+    animation: deslizar-baixo 55s linear infinite;
+}
+ 
+@keyframes deslizar-cima {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+}
+ 
+@keyframes deslizar-baixo {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+}
+ 
+@media (max-width: 1150px) {
+    .foto-coluna {
+        display: none;
+    }
+}
+ 
 .form-card {
+    position: relative;
+    z-index: 3;
     width: 100%;
     max-width: 620px;
     background: #FFFFFF;
@@ -45,38 +128,38 @@
     flex-direction: column;
     gap: 26px;
 }
-
+ 
 .campo {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
+ 
 .campo-dupla {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
-
+ 
 .campo-dupla > div {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
+ 
 label {
     font-family: "Bree Serif", serif;
     font-size: 16px;
     color: #4A2618;
 }
-
+ 
 .opcional {
     font-family: inherit;
     font-weight: normal;
     font-size: 14px;
     color: #a3836f;
 }
-
+ 
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -92,36 +175,36 @@ textarea {
     transition: 0.25s;
     resize: vertical;
 }
-
+ 
 input::placeholder,
 textarea::placeholder {
     color: #b79a80;
 }
-
+ 
 input:focus,
 textarea:focus {
     border-color: #E85D24;
     background: #FFFFFF;
     box-shadow: 0 0 0 3px rgba(232, 93, 36, 0.15);
 }
-
+ 
 .chips {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
-
+ 
 .chip {
     position: relative;
 }
-
+ 
 .chip input {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
-
+ 
 .chip span {
     display: inline-block;
     padding: 11px 20px;
@@ -134,16 +217,16 @@ textarea:focus {
     transition: 0.25s;
     user-select: none;
 }
-
+ 
 .chip input:checked + span {
     background-color: #E85D24;
     color: #FFFFFF;
 }
-
+ 
 .chip:hover span {
     box-shadow: 0 0 0 3px rgba(232, 93, 36, 0.15);
 }
-
+ 
 .btn-enviar {
     justify-self: start;
     align-self: flex-start;
@@ -151,30 +234,30 @@ textarea:focus {
     cursor: pointer;
     margin-top: 6px;
 }
-
+ 
 .form-aviso {
     font-size: 15px;
     color: #4A2618;
     min-height: 20px;
 }
-
+ 
 .form-aviso.erro {
     color: #c0392b;
 }
-
+ 
 @media (max-width: 640px) {
     .ajudar-inicio {
         padding: 70px 24px 40px;
     }
-
+ 
     .ajudar-inicio h1 {
         font-size: 32px;
     }
-
+ 
     .form-card {
         padding: 32px 24px;
     }
-
+ 
     .campo-dupla {
         grid-template-columns: 1fr;
     }
