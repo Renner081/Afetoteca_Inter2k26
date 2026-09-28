@@ -6,7 +6,7 @@
     text-align: center;
     font-family: "Bree Serif", serif;
 }
-
+ 
 .projetos-hero span {
     position: relative;
     z-index: 2;
@@ -14,7 +14,7 @@
     font-size: 18px;
     font-weight: bold;
 }
-
+ 
 .projetos-hero h1 {
     position: relative;
     z-index: 2;
@@ -23,7 +23,7 @@
     line-height: 1.15;
     color: #FFFFFF;
 }
-
+ 
 .projetos-hero p {
     position: relative;
     z-index: 2;
@@ -33,7 +33,7 @@
     line-height: 1.6;
     color: #F7EBDD;
 }
-
+ 
 .projeto-secao {
     position: relative;
     min-height: 580px;
@@ -44,7 +44,7 @@
     padding: 60px 80px;
     overflow: hidden;
 }
-
+ 
 .projeto-secao::before {
     content: "";
     position: absolute;
@@ -52,15 +52,15 @@
     background: linear-gradient(100deg, rgba(74, 38, 24, 0.92) 0%, rgba(74, 38, 24, 0.35) 50%, rgba(74, 38, 24, 0.05) 100%);
     z-index: 1;
 }
-
+ 
 .projeto-secao.direita {
     justify-content: flex-end;
 }
-
+ 
 .projeto-secao.direita::before {
     background: linear-gradient(260deg, rgba(74, 38, 24, 0.92) 0%, rgba(74, 38, 24, 0.35) 50%, rgba(74, 38, 24, 0.05) 100%);
 }
-
+ 
 .projeto-card-flutuante {
     position: relative;
     z-index: 2;
@@ -71,34 +71,34 @@
     padding: 40px;
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 }
-
+ 
 .projeto-card-flutuante span {
     color: #E85D24;
     font-size: 18px;
     font-weight: bold;
     font-family: "Bree Serif", serif;
 }
-
+ 
 .projeto-card-flutuante h2 {
     margin-top: 8px;
     font-family: "Bree Serif", serif;
     font-size: 27px;
     color: #4A2618;
 }
-
+ 
 .projeto-card-flutuante p {
     margin-top: 14px;
     font-size: 16px;
     line-height: 1.65;
     color: #4A2618;
 }
-
+ 
 .projeto-mini-fotos {
     display: flex;
     gap: 10px;
     margin-top: 22px;
 }
-
+ 
 .projeto-mini-fotos img {
     width: 72px;
     height: 72px;
@@ -106,11 +106,104 @@
     border-radius: 12px;
     border: 1.5px solid #E85D24;
 }
-
+ 
 .projeto-card-flutuante .btn-outline {
     margin-top: 24px;
 }
-
+ 
+.cronograma {
+    background-color: #F7EBDD;
+    padding: 90px 40px;
+}
+ 
+.cronograma-cabecalho {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+}
+ 
+.cronograma-cabecalho span {
+    color: #E85D24;
+    font-size: 19px;
+    font-weight: bold;
+}
+ 
+.cronograma-cabecalho h2 {
+    margin-top: 12px;
+    font-size: 32px;
+    color: #4A2618;
+}
+ 
+.cronograma-cabecalho p {
+    margin-top: 16px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #4A2618;
+    font-family: system-ui, sans-serif;
+}
+ 
+.cronograma-grid {
+    max-width: 1180px;
+    margin: 44px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+ 
+.cronograma-card {
+    background: #FFFFFF;
+    border: 1.8px solid #E85D24;
+    border-radius: 16px;
+    padding: 26px 22px;
+    text-align: left;
+}
+ 
+.cronograma-dia {
+    display: inline-block;
+    color: #E85D24;
+    font-family: "Bree Serif", serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.cronograma-card h3 {
+    margin-top: 8px;
+    font-family: "Bree Serif", serif;
+    font-size: 19px;
+    color: #4A2618;
+}
+ 
+.cronograma-horario {
+    margin-top: 6px;
+    font-weight: bold;
+    color: #4A2618;
+    font-size: 15px;
+    font-family: system-ui, sans-serif;
+}
+ 
+.cronograma-card p:last-child {
+    margin-top: 8px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: #4A2618;
+    font-family: system-ui, sans-serif;
+}
+ 
+@media (max-width: 900px) {
+    .cronograma-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+@media (max-width: 560px) {
+    .cronograma-grid {
+        grid-template-columns: 1fr;
+    }
+}
+ 
 .projetos-cta {
     text-align: center;
     max-width: 700px;
@@ -118,12 +211,12 @@
     padding: 100px 40px 110px;
     font-family: "Bree Serif", serif;
 }
-
+ 
 .projetos-cta h2 {
     font-size: 30px;
     color: #4A2618;
 }
-
+ 
 .projetos-cta p {
     margin: 16px 0 32px;
     font-size: 18px;
@@ -131,7 +224,7 @@
     color: #4A2618;
     font-family: system-ui, sans-serif;
 }
-
+ 
 @media (max-width: 860px) {
     .projeto-secao,
     .projeto-secao.direita {
@@ -139,16 +232,16 @@
         padding: 50px 24px;
         min-height: 520px;
     }
-
+ 
     .projeto-secao::before,
     .projeto-secao.direita::before {
         background: rgba(74, 38, 24, 0.78);
     }
-
+ 
     .projeto-card-flutuante {
         max-width: 100%;
     }
-
+ 
     .projetos-hero h1 {
         font-size: 32px;
     }
