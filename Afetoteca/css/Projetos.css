@@ -272,3 +272,35 @@
 .breadcrumb span[aria-hidden="true"] {
     font-size: 20px;
 }
+.links-direcionamento {
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.links-direcionamento h2 {
+    margin-bottom: 10px;
+}
+
+.links-direcionamento p {
+    margin-bottom: 25px;
+}
+
+.links-direcionamento-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.links-direcionamento-botoes a {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    border: 2px solid currentColor;
+    border-radius: 8px;
+}
+
+.links-direcionamento-botoes a:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+}
