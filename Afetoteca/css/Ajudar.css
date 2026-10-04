@@ -18,7 +18,11 @@
     line-height: 1.15;
     color: #4A2618;
 }
- 
+
+html[data-theme="dark"] .ajudar-inicio h1 {
+    color: #F0A874;
+}
+
 .ajudar-inicio p {
     margin: 20px auto 0;
     max-width: 560px;
@@ -26,7 +30,11 @@
     line-height: 1.6;
     color: #4A2618;
 }
- 
+
+html[data-theme="dark"] .ajudar-inicio p {
+    color: #E85D24;
+}
+
 .voluntario-section {
     position: relative;
     overflow: hidden;
@@ -59,10 +67,18 @@
     top: 0;
     background: linear-gradient(to bottom, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 }
+
+html[data-theme="dark"] .foto-coluna::before {
+    background: linear-gradient(to bottom, #160901 0%, rgba(255, 255, 255, 0) 100%);
+}
  
 .foto-coluna::after {
     bottom: 0;
     background: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+html[data-theme="dark"] .foto-coluna::after {
+    background: linear-gradient(to top, #160901 0%, rgba(255, 255, 255, 0) 100%);
 }
  
 .foto-coluna.esquerda {
@@ -128,7 +144,11 @@
     flex-direction: column;
     gap: 26px;
 }
- 
+
+html[data-theme="dark"] .form-card {
+    background: #291204;
+}
+
 .campo {
     display: flex;
     flex-direction: column;
@@ -152,7 +172,11 @@ label {
     font-size: 16px;
     color: #4A2618;
 }
- 
+
+html[data-theme="dark"] label {
+    color: #E85D24;
+}
+
 .opcional {
     font-family: inherit;
     font-weight: normal;
