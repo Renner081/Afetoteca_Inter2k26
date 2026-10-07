@@ -105,7 +105,7 @@ html[data-theme="dark"] .projeto-card-flutuante h2 {
  
 .projeto-card-flutuante p {
     margin-top: 14px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.65;
     color: #4A2618;
 }
@@ -170,7 +170,6 @@ html[data-theme="dark"] .cronograma-cabecalho h2 {
     font-size: 17px;
     line-height: 1.6;
     color: #4A2618;
-    font-family: system-ui, sans-serif;
 }
 
 html[data-theme="dark"] .cronograma-cabecalho p {
@@ -178,14 +177,17 @@ html[data-theme="dark"] .cronograma-cabecalho p {
 }
  
 .cronograma-grid {
-    max-width: 1180px;
+    max-width: 980px;
     margin: 44px auto 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
  
 .cronograma-card {
+    flex: 0 1 calc((100% - 40px) / 3);
+    box-sizing: border-box;
     background: #FFFFFF;
     border: 1.8px solid #E85D24;
     border-radius: 16px;
@@ -212,7 +214,7 @@ html[data-theme="dark"] .cronograma-card {
 .cronograma-card h3 {
     margin-top: 8px;
     font-family: "Bree Serif", serif;
-    font-size: 19px;
+    font-size: 19.5px;
     color: #4A2618;
 }
 
@@ -225,8 +227,8 @@ html[data-theme="dark"] .cronograma-card h3 {
     margin-top: 6px;
     font-weight: bold;
     color: #4A2618;
-    font-size: 15px;
-    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    font-family: "Bree Serif", serif;
 }
 
 html[data-theme="dark"] .cronograma-horario {
@@ -235,10 +237,9 @@ html[data-theme="dark"] .cronograma-horario {
  
 .cronograma-card p:last-child {
     margin-top: 8px;
-    font-size: 14.5px;
+    font-size: 15px;
     line-height: 1.5;
     color: #4A2618;
-    font-family: system-ui, sans-serif;
 }
 
 html[data-theme="dark"] .cronograma-card p:last-child {
@@ -247,13 +248,13 @@ html[data-theme="dark"] .cronograma-card p:last-child {
  
 @media (max-width: 900px) {
     .cronograma-grid {
-        grid-template-columns: repeat(2, 1fr);
+        flex: 0 1 calc((100% - 20px) / 2);
     }
 }
  
 @media (max-width: 560px) {
     .cronograma-grid {
-        grid-template-columns: 1fr;
+        flex: 0 1 100%;
     }
 }
  
@@ -266,26 +267,29 @@ html[data-theme="dark"] .cronograma-card p:last-child {
 }
  
 .projetos-cta h2 {
-    font-size: 30px;
+    font-size: 31px;
     color: #4A2618;
 }
 
 html[data-theme="dark"] .projetos-cta h2 {
-    color: #E85D24;
+    color: #F0A874;
 }
  
 .projetos-cta p {
     margin: 16px 0 32px;
     font-size: 18px;
     line-height: 1.6;
+    margin-bottom: 40px;
     color: #4A2618;
-    font-family: system-ui, sans-serif;
 }
 
 html[data-theme="dark"] .projetos-cta p {
     color: #E85D24;
 }
  
+.projetos-cta .btn-ajudar {
+    display: inline-block;
+}
  
 @media (max-width: 860px) {
     .projeto-secao,

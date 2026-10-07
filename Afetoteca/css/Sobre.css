@@ -72,6 +72,14 @@ html[data-theme="dark"] .sobre-hero-texto h1 {
     margin: 0 auto;
     padding: 100px 40px;
 }
+
+.sobre-historia-texto {
+    order: 2;
+}
+
+.sobre-historia-midia-wrapper {
+    order: 1;
+}
  
 .sobre-historia-texto span {
     color: #E85D24;
@@ -94,7 +102,7 @@ html[data-theme="dark"] .sobre-historia-texto h2 {
  
 .sobre-historia-texto p {
     margin-top: 18px;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.7;
     color: #4A2618;
 }
@@ -106,12 +114,12 @@ html[data-theme="dark"] .sobre-historia-texto p{
 .sobre-historia-midia-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 24px; /* esse é o "espaço entre as imgs" que você quer — ajuste o valor */
+    gap: 24px;
 }
 
 .sobre-historia-midia {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     border-radius: 16px;
     overflow: hidden;
     border: 1.8px solid #E85D24;
@@ -121,7 +129,13 @@ html[data-theme="dark"] .sobre-historia-texto p{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
 }
+
+.sobre-historia-midia:hover img {
+    transform: scale(1.08);
+}
+
 .sobre-valores {
     background-color: #F7EBDD;
     padding: 90px 40px;
@@ -133,7 +147,7 @@ html[data-theme="dark"] .sobre-valores {
 }
 
 .sobre-valores-cabecalho,
-.sobre-pilares-cabecalho,
+.sobre-parceiros-cabecalho,
 .sobre-galeria-cabecalho {
     max-width: 1180px;
     margin: 0 auto;
@@ -141,7 +155,7 @@ html[data-theme="dark"] .sobre-valores {
 }
  
 .sobre-valores-cabecalho span,
-.sobre-pilares-cabecalho span,
+.sobre-parceiros-cabecalho span,
 .sobre-galeria-cabecalho span {
     color: #E85D24;
     font-size: 19px;
@@ -150,7 +164,7 @@ html[data-theme="dark"] .sobre-valores {
 }
  
 .sobre-valores-cabecalho h2,
-.sobre-pilares-cabecalho h2,
+.sobre-parceiros-cabecalho h2,
 .sobre-galeria-cabecalho h2 {
     margin-top: 12px;
     font-family: "Bree Serif", serif;
@@ -162,7 +176,7 @@ html[data-theme="dark"] .sobre-valores-cabecalho h2{
     color: #F0A874;
 }
 
-html[data-theme="dark"] .sobre-pilares-cabecalho h2{
+html[data-theme="dark"] .sobre-parceiros-cabecalho h2{
     color: #F0A874;
 }
 
@@ -213,62 +227,112 @@ html[data-theme="dark"] .valor-card p{
 }
  
  
-.sobre-pilares {
+.sobre-parceiros {
     max-width: 1180px;
     margin: 0 auto;
     padding: 100px 40px;
     text-align: center;
 }
- 
-.pilares-grid {
-    margin: 44px 0 40px;
+
+.parceiros-grid {
+    margin-top: 44px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 28px;
 }
- 
-.pilar-card {
+
+.parceiro-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
     text-align: left;
-    border-radius: 18px;
-    overflow: hidden;
+    background: #F7EBDD;
     border: 1.8px solid #E85D24;
-    background: #FFFFFF;
-}
- 
-html[data-theme="dark"] .pilar-card{
-    background: #2B1408;
-    border:  1.8px solid #E85D24;
+    border-radius: 18px;
+    padding: 32px;
 }
 
-.pilar-card img {
-    width: 100%;
-    height: 200px;
+html[data-theme="dark"] .parceiro-card {
+    background: #160901;
+    border: 1.8px solid #E85D24;
+}
+
+.parceiro-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
     object-fit: cover;
-    display: block;
-}
- 
-.pilar-card h3 {
-    font-family: "Bree Serif", serif;
-    font-size: 21px;
-    color: #4A2618;
-    padding: 22px 22px 0;
+    flex-shrink: 0;
+    border: 1.8px solid #E85D24;
+    transition: transform 0.3s ease;
 }
 
-html[data-theme="dark"] .pilar-card h3{
+.parceiro-logo:hover {
+    transform: scale(1.1);
+}
+
+.parceiro-texto h3 {
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
+    color: #4A2618;
+}
+
+html[data-theme="dark"] .parceiro-texto h3 {
     color: #E85D24;
 }
- 
-.pilar-card p {
-    font-size: 16px;
+
+.parceiro-texto p {
+    margin-top: 8px;
+    font-size: 15px;
     line-height: 1.6;
     color: #4A2618;
-    padding: 10px 22px 26px;
 }
 
-html[data-theme="dark"] .pilar-card p{
+html[data-theme="dark"] .parceiro-texto p {
     color: whitesmoke;
 }
  
+.parceiro-instagram {
+    display: inline-block;
+    margin-top: 12px;
+    color: #E85D24;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 900;
+    transition: 0.3s ease;
+}
+
+.parceiro-instagram svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    vertical-align: middle;
+    fill: #E85D24;
+    transition: 0.3s ease;
+}
+
+.parceiro-instagram span {
+    vertical-align: middle;
+}
+
+.parceiro-instagram:hover {
+    color: #4A2618;
+    transform: scale(1.05);
+}
+
+.parceiro-instagram:hover svg {
+    fill: #4A2618;
+    transform: scale(1.05);
+}
+
+html[data-theme="dark"] .parceiro-instagram {
+    color: #F0A874;
+}
+
+html[data-theme="dark"] .parceiro-instagram svg {
+    fill: #F0A874;
+}
+
 .sobre-galeria {
     background-color: #F7EBDD;
     padding: 90px 40px 100px;
@@ -304,12 +368,17 @@ html[data-theme="dark"] .sobre-galeria{
     .sobre-historia {
         grid-template-columns: 1fr;
     }
+
+    .sobre-historia-texto,
+    .sobre-historia-midia-wrapper {
+        order: initial;
+    }
  
     .valores-grid {
         grid-template-columns: repeat(2, 1fr);
     }
  
-    .pilares-grid {
+   .parceiros-grid {
         grid-template-columns: 1fr;
     }
  

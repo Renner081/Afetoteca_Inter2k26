@@ -3,11 +3,23 @@ const botaoTema = document.getElementById('botao-escuro');
 const icone = botaoTema.querySelector('i');
 const html = document.documentElement;
 
+const texto = document.createElement('span');
+texto.className = 'btn-temae-texto';
+botaoTema.appendChild(texto);
+
+function atualizarBotao(escuro) {
+    botaoTema.setAttribute('aria-pressed', escuro ? 'true' : 'false');
+    botaoTema.setAttribute('aria-label', escuro ? 'Ativar modo claro' : 'Ativar modo escuro');
+    botaoTema.title = escuro ? 'Mudar para o modo claro' : 'Mudar para o modo escuro';
+    icone.className = escuro ? 'ti ti-sun' : 'ti ti-moon';
+    texto.textContent = escuro ? 'Modo claro' : 'Modo escuro';
+}
+
 if (localStorage.getItem('tema') === 'dark') {
     html.setAttribute('data-theme', 'dark');
-    botaoTema.setAttribute('aria-pressed', 'true');
-    botaoTema.setAttribute('aria-label', 'Ativar modo claro');
-    icone.className = 'ti ti-sun';
+    atualizarBotao(true);
+} else {
+    atualizarBotao(false);
 }
 
 botaoTema.addEventListener('click', function () {
@@ -15,15 +27,11 @@ botaoTema.addEventListener('click', function () {
 
     if (estaEscuro) {
         html.removeAttribute('data-theme');
-        botaoTema.setAttribute('aria-pressed', 'false');
-        botaoTema.setAttribute('aria-label', 'Ativar modo escuro');
-        icone.className = 'ti ti-moon';
+        atualizarBotao(false);
         localStorage.setItem('tema', 'light');
     } else {
         html.setAttribute('data-theme', 'dark');
-        botaoTema.setAttribute('aria-pressed', 'true');
-        botaoTema.setAttribute('aria-label', 'Ativar modo claro');
-        icone.className = 'ti ti-sun';
+        atualizarBotao(true);
         localStorage.setItem('tema', 'dark');
     }
 });
