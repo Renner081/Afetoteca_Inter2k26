@@ -28,42 +28,52 @@ window.addEventListener("scroll", function () {
         "ajudar.html": "Quero Ajudar"
     };
 
-    // Ao entrar na página inicial, limpa o histórico anterior.
-    if (pagina === "home.html" || pagina === "") {
-        sessionStorage.removeItem(chave);
-        return;
-    }
+// Ao entrar na página inicial, limpa o histórico anterior.
+if (pagina === "home.html" || pagina === "") {
+    sessionStorage.removeItem(chave);
+    return;
+}
 
     if (!paginas[pagina]) return;
 
-    let historico = [];
+    
+let historico = [];
 
-    try {
-        historico = JSON.parse(sessionStorage.getItem(chave) || "[]");
+try {
+    historico = JSON.parse(sessionStorage.getItem(chave) || "[]");
 
-        if (!Array.isArray(historico)) {
-            historico = [];
-        }
-    } catch (erro) {
+    if (!Array.isArray(historico)) {
         historico = [];
     }
+} catch (erro) {
+    historico = [];
+}
 
-    // Se a página já estiver no caminho, remove as páginas
-    // que vinham depois dela.
-    const posicao = historico.findIndex(function (item) {
-        return item.pagina === pagina;
+// Se o histórico estiver vazio, começa por Início.
+if (historico.length === 0) {
+    historico.push({
+        pagina: "home.html",
+        nome: "Início"
     });
+}
 
-    if (posicao !== -1) {
-        historico = historico.slice(0, posicao + 1);
-    } else {
-        historico.push({
-            pagina: pagina,
-            nome: paginas[pagina]
-        });
-    }
+// Se a página já estiver no caminho, remove as páginas
+// que vinham depois dela.
+const posicao = historico.findIndex(function (item) {
+    return item.pagina === pagina;
+});
 
-    sessionStorage.setItem(chave, JSON.stringify(historico));
+if (posicao !== -1) {
+    historico = historico.slice(0, posicao + 1);
+} else {
+    historico.push({
+        pagina: pagina,
+        nome: paginas[pagina]
+    });
+}
+
+sessionStorage.setItem(chave, JSON.stringify(historico));
+
 
     const breadcrumb = document.querySelector(".breadcrumb");
 
