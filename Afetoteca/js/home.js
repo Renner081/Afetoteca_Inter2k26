@@ -1,3 +1,4 @@
+
 window.addEventListener("load", function () {
     document.body.classList.add("entrou");
 });
@@ -8,6 +9,7 @@ window.addEventListener("load", function () {
 
 window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
+
     if (window.scrollY > 50) {
         header.classList.add("scrolled");
     } else {
@@ -26,7 +28,7 @@ window.addEventListener("scroll", function () {
         "ajudar.html": "Quero Ajudar"
     };
 
-    // Ao entrar na página inicial, reinicia o histórico.
+    // Ao entrar na página inicial, limpa o histórico anterior.
     if (pagina === "home.html" || pagina === "") {
         sessionStorage.removeItem(chave);
         return;
@@ -34,10 +36,27 @@ window.addEventListener("scroll", function () {
 
     if (!paginas[pagina]) return;
 
-    let historico = JSON.parse(sessionStorage.getItem(chave) || "[]");
+    let historico = [];
 
-    // Evita repetir a mesma página em sequência.
-    if (historico[historico.length - 1]?.pagina !== pagina) {
+    try {
+        historico = JSON.parse(sessionStorage.getItem(chave) || "[]");
+
+        if (!Array.isArray(historico)) {
+            historico = [];
+        }
+    } catch (erro) {
+        historico = [];
+    }
+
+    // Se a página já estiver no caminho, remove as páginas
+    // que vinham depois dela.
+    const posicao = historico.findIndex(function (item) {
+        return item.pagina === pagina;
+    });
+
+    if (posicao !== -1) {
+        historico = historico.slice(0, posicao + 1);
+    } else {
         historico.push({
             pagina: pagina,
             nome: paginas[pagina]
