@@ -262,3 +262,29 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 5%;
+    font-size: 16px;
+}
+
+.breadcrumb a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.breadcrumb a:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.breadcrumb span[aria-current="page"] {
+    font-weight: bold;
+}
+
+.breadcrumb span[aria-hidden="true"] {
+    font-size: 20px;
+}
