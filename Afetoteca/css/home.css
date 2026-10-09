@@ -202,7 +202,7 @@ html[data-theme="dark"] .btn-temae:hover {
 }
 
 html[data-theme="dark"] .inicio-texto span{
-    color:  #fa9045;
+    color:  #E85D24;
 }
 
 
@@ -226,7 +226,7 @@ html[data-theme="dark"] .inicio-texto h1 {
 }
 
 html[data-theme="dark"] .inicio-texto p {
-    color: #fa9045;
+    color: #E85D24;
 }
 
 .btn-historia {
@@ -341,7 +341,7 @@ html[data-theme="dark"] .resumo-texto h2 {
 }
 
 html[data-theme="dark"] .resumo-texto p {
-    color: #E85D24;
+    color: #ffffff;
 }
 
 .resumo-botoes {
@@ -707,7 +707,7 @@ html[data-theme="dark"] .localizacao-card h2 {
 }
 
 html[data-theme="dark"] .localizacao-card p {
-    color: #f0a874;
+    color: #ffffff;
 
 }
 

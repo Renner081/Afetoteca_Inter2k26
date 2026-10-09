@@ -32,3 +32,23 @@ document.getElementById("form-voluntario").addEventListener("submit", function (
     const link = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(texto)}`;
     window.open(link, "_blank");
 });
+
+const ATIVIDADES = {
+    biblioteca: "Biblioteca Comunitária",
+    capoeira: "Rodas de Capoeira",
+    croche: "Aulas de Crochê",
+    percussao: "Aulas de Percussão e Música",
+    artisticas: "Atividades Artísticas",
+    juventude: "Comitê da Juventude de Roda de Fogo"
+};
+
+const atividadeDaUrl = new URLSearchParams(window.location.search).get("atividade");
+const nomeDaAtividade = ATIVIDADES[atividadeDaUrl];
+
+if (nomeDaAtividade) {
+    document.querySelectorAll('input[name="area"]').forEach(function (caixa) {
+        if (caixa.value === nomeDaAtividade) {
+            caixa.checked = true;
+        }
+    });
+}
