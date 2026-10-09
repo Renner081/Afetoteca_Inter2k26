@@ -286,3 +286,9 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+
+*:focus-visible {
+    outline: 3px solid #6c5ce7;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
